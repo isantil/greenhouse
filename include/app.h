@@ -6,6 +6,7 @@
 #include "wifi_connection.h"
 #include "sensor.h"
 #include "oled.h"
+#include "functions.h"
 
 void App_loop();
 

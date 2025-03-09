@@ -1,8 +1,10 @@
 #include "app.h"
 
+extern bool wifi_state;
+
 void App_loop(){
 
-    //wifi_connection();
+    wifi_state = wifi_loop();
 
     // Variables that stores data from the sensor.
     float temp = get_temperature();
@@ -25,4 +27,5 @@ void App_loop(){
     digitalWrite(RELAY_PIN,LOW);
     delay(5000);
 
+    conf_read();
 }
